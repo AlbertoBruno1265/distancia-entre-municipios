@@ -1,6 +1,6 @@
 # importação de bibliotecas
 from os import system
-from calculo_distancia import distancia_entre_cidades, dicionario_cidades
+from calculo_distancia import distancia_entre_cidades, dicionario_cidades, salvar_csv
 
 # Criação de variáveis globais
 cidades = list()
@@ -40,18 +40,7 @@ for i in range(0, num_cidades):
 resp = str(input("\nDeseja salvar estes dados em um CSV? [S/N]: ")).lower()
 
 if resp == 's':
-    nome_arquivo = input("Digite o nome do arquivo: ").lower()
-
-    if nome_arquivo.find(".csv") == -1:
-        nome_arquivo += ".csv"
-    
-    with open(nome_arquivo, 'w') as arq:
-        arq.write("cidade1,cidade2,distancia\n")
-
-        for i in range(0, len(distancias)):
-            arq.write(f"{distancias[i][0]},{distancias[i][1]},{distancias[i][2]}\n")
-    
-    print("Arquivo salvo com sucesso!")
+    salvar_csv(distancias)
 
 # Fim do programa
 print("\nPrograma finalizado com sucesso :)")
