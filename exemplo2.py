@@ -8,12 +8,18 @@ ufs = list()
 latitudes_e_longitudes = dict()
 distancias = list()
 
-df_cidades = pd.read_csv("exemplo.csv")
+# Usuário digitará o nome do arquivo .CSV que deseja ler
+arquivo_csv = str(input("Digite o nome do arquivo .CSV que deseja ler: "))
 
+# Criação de um Dataframe a partir do .CSV digitado
+df_cidades = pd.read_csv(arquivo_csv)
+
+# Tranformação das colunas do dataframe em listas
 cidades = list(df_cidades["CIDADE"])
 ufs = list(df_cidades["UF"])
 
-print("Obtendo Latitudes e Longitudes...")
+# Requisição a API Nominatim
+print("\nObtendo Latitudes e Longitudes...")
 latitudes_e_longitudes = dicionario_cidades(cidades, ufs)
 print()
 

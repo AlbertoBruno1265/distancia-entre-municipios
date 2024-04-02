@@ -1,2 +1,46 @@
 cidade1,cidade2,distancia
-SÃO BERNARDO DO CAMPO - SP,SÃO CAETANO DO SUL - SP,10032
+São Paulo - SP,Rio de Janeiro - RJ,387023
+São Paulo - SP,Brasília - DF,873007
+São Paulo - SP,Salvador - BA,1483008
+São Paulo - SP,Fortaleza - CE,2379514
+São Paulo - SP,Belo Horizonte - MG,501704
+São Paulo - SP,Manaus - AM,2710572
+São Paulo - SP,Curitiba - PR,359847
+São Paulo - SP,Recife - PE,2160327
+São Paulo - SP,Porto Alegre - RS,882935
+Rio de Janeiro - RJ,Brasília - DF,946047
+Rio de Janeiro - RJ,Salvador - BA,1221883
+Rio de Janeiro - RJ,Fortaleza - CE,2193873
+Rio de Janeiro - RJ,Belo Horizonte - MG,341943
+Rio de Janeiro - RJ,Manaus - AM,2881504
+Rio de Janeiro - RJ,Curitiba - PR,729358
+Rio de Janeiro - RJ,Recife - PE,1891794
+Rio de Janeiro - RJ,Porto Alegre - RS,1191792
+Brasília - DF,Salvador - BA,1090250
+Brasília - DF,Fortaleza - CE,1696509
+Brasília - DF,Belo Horizonte - MG,633941
+Brasília - DF,Manaus - AM,1945964
+Brasília - DF,Curitiba - PR,1081742
+Brasília - DF,Recife - PE,1680532
+Brasília - DF,Porto Alegre - RS,1625252
+Salvador - BA,Fortaleza - CE,1027977
+Salvador - BA,Belo Horizonte - MG,981445
+Salvador - BA,Manaus - AM,2627787
+Salvador - BA,Curitiba - PR,1830317
+Salvador - BA,Recife - PE,677478
+Salvador - BA,Porto Alegre - RS,2365497
+Fortaleza - CE,Belo Horizonte - MG,1897354
+Fortaleza - CE,Manaus - AM,2385427
+Fortaleza - CE,Curitiba - PR,2690615
+Fortaleza - CE,Recife - PE,628136
+Fortaleza - CE,Porto Alegre - RS,3245678
+Belo Horizonte - MG,Manaus - AM,2579905
+Belo Horizonte - MG,Curitiba - PR,851234
+Belo Horizonte - MG,Recife - PE,1658663
+Belo Horizonte - MG,Porto Alegre - RS,1384569
+Manaus - AM,Curitiba - PR,2748552
+Manaus - AM,Recife - PE,2841827
+Manaus - AM,Porto Alegre - RS,3143169
+Curitiba - PR,Recife - PE,2506079
+Curitiba - PR,Porto Alegre - RS,555826
+Recife - PE,Porto Alegre - RS,3042942
