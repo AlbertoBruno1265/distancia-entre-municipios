@@ -37,7 +37,7 @@ def distancia_entre_cidades(dic, chv1, chv2):
     deltaLat = dic[chv1][0] - dic[chv2][0]
     deltaLon = dic[chv1][1] - dic[chv2][1]
 
-    # Uso do teorema de pitágora para cálculo da distancia em linha reta (resultado em metros)
+    # Uso do teorema de pitágoras para cálculo da distancia em linha reta (resultado em metros)
     # OBS.: Cada grau de uma latitude ou longitude equivale a 111110 metros.
     distancia = int(round(sqrt(deltaLat**2 + deltaLon**2) * 111110, 0))
 
