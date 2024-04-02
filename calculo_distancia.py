@@ -45,15 +45,21 @@ def distancia_entre_cidades(dic, chv1, chv2):
     return distancia
 
 def salvar_csv(cidades_e_distancias):
+    # Lê o nome que o usuário deseja salvar
     nome_arquivo = input("Digite o nome do arquivo: ").lower()
 
+    # Caso o usuário tenha esquecido a extensão, o programa adiciona
     if nome_arquivo.find(".csv") == -1:
         nome_arquivo += ".csv"
     
+    # Cria ou dá um TRUNCATE no arquivo digitado
     with open(nome_arquivo, 'w') as arq:
+        # Adiciona o cabeçalho ao arquivo
         arq.write("CIDADE1,CIDADE2,DISTANCIA\n")
 
+        # Adiciona linhas ao arquivo
         for i in range(0, len(cidades_e_distancias)):
             arq.write(f"{cidades_e_distancias[i][0]},{cidades_e_distancias[i][1]},{cidades_e_distancias[i][2]}\n")
     
+    # Encerra a função
     print("Arquivo salvo com sucesso!")
