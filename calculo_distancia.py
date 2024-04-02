@@ -1,31 +1,45 @@
 def dicionario_cidades(lista_cidades, lista_estados):
+    # Importação da biblioteca de requisição
     import requests
 
+    # Criação do dicionário que gravará os dados
     dic_cidade = dict()
 
     for i in range(0, len(lista_cidades)):
 
+        # Transformação do nome da cidade que fique adequada ao link de requisição
         cidade = lista_cidades[i].replace(" ", "+")
 
+        # Construção do link de requesição
         request = f'''http://nominatim.openstreetmap.org/search?city={cidade}&state={lista_estados[i]}&country=Brazil&format=json'''
 
+        # Captura da resposta da API
         response = requests.get(request).json()
 
+        # Criação da chave do dicionário
         chave = f"{lista_cidades[i]} - {lista_estados[i]}"
 
+        # Dados de Latitude e Longitude obtidos pela resposta da API
         lat = float(response[0]["lat"])
         lon = float(response[0]["lon"])
 
+        # Dados salvos no dicionário
         dic_cidade[chave] = [lat, lon]
 
+    # Retorna o dicionário com os dados
     return dic_cidade
 
 def distancia_entre_cidades(dic, chv1, chv2):
+    # Importação do método de raiz quadrada da biblioteca "math"
     from math import sqrt
 
+    # Conculo da diferença entre Latitudes e Longitudes
     deltaLat = dic[chv1][0] - dic[chv2][0]
     deltaLon = dic[chv1][1] - dic[chv2][1]
 
-    distance = int(round(sqrt(deltaLat**2 + deltaLon**2) * 111110, 0))
+    # Uso do teorema de pitágora para cálculo da distancia em linha reta (resultado em metros)
+    # OBS.: Cada grau de uma latitude ou longitude equivale a 111110 metros.
+    distancia = int(round(sqrt(deltaLat**2 + deltaLon**2) * 111110, 0))
 
-    return distance
+    # Retorno da distância
+    return distancia
