@@ -2,6 +2,9 @@
 from os import system
 from calculo_distancia import distancia_entre_cidades, dicionario_cidades, salvar_csv
 
+# Limpa a tela do console
+system("CLS")
+
 # Criação de variáveis globais
 cidades = list()
 ufs = list()
