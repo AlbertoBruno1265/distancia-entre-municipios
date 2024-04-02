@@ -9,7 +9,7 @@ latitudes_e_longitudes = dict()
 distancias = list()
 
 # Usuário digitará o nome do arquivo .CSV que deseja ler
-arquivo_csv = str(input("Digite o nome do arquivo .CSV que deseja ler: "))
+arquivo_csv = str(input("Digite o caminho do arquivo .CSV que deseja ler: "))
 
 # Criação de um Dataframe a partir do .CSV digitado
 df_cidades = pd.read_csv(arquivo_csv)
