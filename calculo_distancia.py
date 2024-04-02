@@ -51,7 +51,7 @@ def salvar_csv(cidades_e_distancias):
         nome_arquivo += ".csv"
     
     with open(nome_arquivo, 'w') as arq:
-        arq.write("cidade1,cidade2,distancia\n")
+        arq.write("CIDADE1,CIDADE2,DISTANCIA\n")
 
         for i in range(0, len(cidades_e_distancias)):
             arq.write(f"{cidades_e_distancias[i][0]},{cidades_e_distancias[i][1]},{cidades_e_distancias[i][2]}\n")
