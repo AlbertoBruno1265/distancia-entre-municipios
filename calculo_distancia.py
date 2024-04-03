@@ -44,6 +44,25 @@ def distancia_entre_cidades(dic, chv1, chv2):
     # Retorno da distância
     return distancia
 
+def ler_csv(caminho, tem_cabecalho=True):
+    
+    inicio = 0
+    if tem_cabecalho:
+        inicio = 1
+    
+    cidades_e_ufs = [[],[]]
+    
+    with open(caminho, 'r', encoding='UTF-8') as arq:
+
+        for linha in arq.readlines()[inicio:]:
+            linha = linha.replace("\n", "")
+            linha = linha.split(',')
+
+            cidades_e_ufs[0].append(linha[0])
+            cidades_e_ufs[1].append(linha[1])
+
+    return cidades_e_ufs
+
 def salvar_csv(cidades_e_distancias):
     # Lê o nome que o usuário deseja salvar
     nome_arquivo = input("Digite o nome do arquivo: ").lower()
