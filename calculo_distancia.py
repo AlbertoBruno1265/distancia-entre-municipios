@@ -45,22 +45,31 @@ def distancia_entre_cidades(dic, chv1, chv2):
     return distancia
 
 def ler_csv(caminho, tem_cabecalho=True):
-    
+    # Seta o inicio da varredura da lista para zero
     inicio = 0
+
+    # Caso o arquivo .CSV tenha cabeçalho, inicia lendo da segunda linha
     if tem_cabecalho:
         inicio = 1
     
+    # Lista para guardar cidades e suas respctivas ufs
     cidades_e_ufs = [[],[]]
     
+    # Leitura do arquivo selecionado pelo usuário
     with open(caminho, 'r', encoding='UTF-8') as arq:
 
         for linha in arq.readlines()[inicio:]:
+            # Formatação da linha lida
             linha = linha.replace("\n", "")
+
+            # Separação das informações pela virgula
             linha = linha.split(',')
 
+            # Adicionando informações a lista
             cidades_e_ufs[0].append(linha[0])
             cidades_e_ufs[1].append(linha[1])
 
+    # Retorno da lista
     return cidades_e_ufs
 
 def salvar_csv(cidades_e_distancias):
